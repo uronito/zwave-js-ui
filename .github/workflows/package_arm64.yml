@@ -30,7 +30,7 @@ jobs:
       - uses: uraimo/run-on-arch-action@v2
         name: Package
         with:
-          arch: none # arm64
+          arch: linux/arm64 # arm64
           distro: none # bullseye
 
           dockerRunArgs: |
