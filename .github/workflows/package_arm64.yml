@@ -30,13 +30,13 @@ jobs:
       - uses: uraimo/run-on-arch-action@v2
         name: Package
         with:
-          arch: linux/arm64 # arm64
+          arch: none # arm64
           distro: none # bullseye
 
           dockerRunArgs: |
             --volume "${PWD}:/app"
 
-          base_image: arm64v8/node:18-bullseye
+          base_image: linux/arm64/node:18-bullseye
 
           # Rebuild .node modules for am64
           run: |
